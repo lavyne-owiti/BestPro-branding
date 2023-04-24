@@ -1,14 +1,14 @@
-// import 'package:bestpro_branding_app/core/shared/features.dart';
+import 'package:bestpro_branding_app/features/authorazation/presentation/screens/login_page.dart';
 import 'package:bestpro_branding_app/features/onboarding/presentation/screens/splash.dart';
-import 'package:bestpro_branding_app/homepage.dart';
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 bool show = true;
-void main() async {
+Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  final prefs = await SharedPreferences.getInstance();
-  show = prefs.getBool("ON_BOARDING") ?? true;
+  // OnboardingLocalDataSource();
+  await Firebase.initializeApp();
+  // Feature;
   runApp(const MyApp());
 }
 
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: show ? const SplashScreen() : const MyHomePage(title: "Explore"),
+      home: show ? const SplashScreen() : const LoginPage(),
       debugShowCheckedModeBanner: false,
     );
   }

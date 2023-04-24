@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "858788154860",
+    "project_id": "bestpro-branding-app",
+    "storage_bucket": "bestpro-branding-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:858788154860:android:4c1dc18c55da45356184c9",
+        "android_client_info": {
+          "package_name": "com.example.bestpro_branding_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "858788154860-7jn8pnjtcs6jrgvbrltdscmjbqbsn55a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClGXtCZjKP1w4KMhbZGAq-NOGc8P8XAvA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "858788154860-7jn8pnjtcs6jrgvbrltdscmjbqbsn55a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

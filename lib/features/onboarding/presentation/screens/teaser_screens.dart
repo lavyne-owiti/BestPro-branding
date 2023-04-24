@@ -1,5 +1,5 @@
 // import 'package:bestpro_branding_app/core/shared/features.dart';
-import 'package:bestpro_branding_app/homepage.dart';
+import 'package:bestpro_branding_app/features/authorazation/presentation/screens/login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -12,7 +12,11 @@ class TeaserScreens extends StatelessWidget {
       title: "Hoodies",
       body: "Get the best,unique and customized hoodies to your own liking.",
       image: Center(
-        child: Image.asset("assets/images/hoodyman.png", height: 500.0),
+        child: Image.asset(
+          "assets/images/hoodyman.png",
+          height: 500,
+          width: 350,
+        ),
       ),
       decoration: const PageDecoration(
         titleTextStyle: TextStyle(
@@ -99,9 +103,10 @@ class TeaserScreens extends StatelessWidget {
   void onDone(context) async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setBool("ON_BOARDING", false);
+    // Feature;
     Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-            builder: (context) => const MyHomePage(title: "explore")));
+            builder: (context) => const LoginPage()));
   }
 }
